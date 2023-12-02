@@ -8,9 +8,16 @@
     Shell.FlyoutBehavior="Disabled">
 
     <TabBar>
-        <Tab>
-            <ShellContent Route="TipCalculatorPage" 
-                          ContentTemplate="{DataTemplate local:TipCalculatorPage}" />
-        </Tab>
+        
+        <ShellContent 
+            Title="Calculadora de propinas"
+            Route="TipCalculatorPage" 
+            ContentTemplate="{DataTemplate local:TipCalculatorPage}" />
+
+        <ShellContent 
+            Title="Aportaciones"
+            Route="Aportaciones" 
+            ContentTemplate="{DataTemplate local:Aportaciones}" />
+        
     </TabBar>
 </Shell>
