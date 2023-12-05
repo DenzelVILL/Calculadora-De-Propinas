@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TipCalculator.Views.UserPreferencePage"
+             Title="Preferencias De Usuario">
+    
+    <VerticalStackLayout Margin="16">
+        
+        <Grid RowDefinitions="*,*,*,*" 
+              ColumnDefinitions="Auto,*"
+              RowSpacing="16"
+              ColumnSpacing="8"/>
+
+
+        <Label Grid.Row="0" 
+               Grid.Column="0" 
+               Text="Nombre a mostrar:"
+               VerticalOptions="Center"/>
+
+        <Entry Grid.Row="0" 
+               Grid.Column="1" 
+               Placeholder="Nombre que se desee se muestre"
+               Text="{Binding DisplayName}"/>
+
+        <Label Grid.Row="1" 
+               Grid.Column="0" 
+               Text="Tema"
+               VerticalOptions="Center"/>
+
+        <HorizontalStackLayout Grid.Row="1" 
+                               Grid.Column="1" 
+                               RadioButtonGroup.GroupName="{Binding ThemeGroupName}" 
+                               RadioButtonGroup.SelectedValue="{Binding ThemeSelection}" >
+            <RadioButton Content="Dark" Value="Dark"/>
+            <RadioButton Content="Light" Value="Light" IsChecked="True"/>
+            
+        </HorizontalStackLayout>
+        
+        <Label Grid.Row="2" 
+               Grid.Column="0" 
+               Text="Solo WIFI?"
+               VerticalOptions="Center"/>
+        
+        <Switch Grid.Row="2" 
+                Grid.Column="1"
+                OnColor="Green"
+                ThumbColor="Blue"
+                IsToggled="{Binding WifiOnly}"/>
+        <Button 
+            Grid.Row="3"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Text="Guardar"
+            Margin="0,24,0,0"
+            HorizontalOptions="Center"
+            Command="{Binding SavePreferencesCommand}"/>
+
+    </VerticalStackLayout>
+</ContentPage>

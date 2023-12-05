@@ -1,6 +1,7 @@
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 using TipCalculator.Models;
+using TipCalculator.Views;
 using TipCalculator.ViewModels;
 
 namespace TipCalculator.Views
@@ -14,6 +15,7 @@ namespace TipCalculator.Views
             InitializeComponent();
             _viewModel = new TipCalculatorViewModel();
             BindingContext = _viewModel;
+
            
         }
 

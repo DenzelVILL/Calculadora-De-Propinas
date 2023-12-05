@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TipCalculator.ViewModels"
+             x:Class="TipCalculator.Views.AportacionPage"
+             BindingContext="{x:Static local:AportacionViewModel.Instance}">
+
+    <StackLayout>
+        <Label Text="Calculadora de Aportaciones" FontSize="20" HorizontalOptions="CenterAndExpand" Margin="0,10,0,20" />
+
+        <Label Text="Número de Contribuyentes:" />
+        <Entry Text="{Binding AportacionModel.NumberDeContribuyentes, Mode=TwoWay}" Placeholder="Ingrese el número de contribuyentes" Keyboard="Numeric" />
+
+        <Label Text="Cantidad de Aportación por Persona:" />
+        <Entry Text="{Binding AportacionModel.CantidadAportacion, Mode=TwoWay}" Placeholder="Ingrese la cantidad de aportación" Keyboard="Numeric" />
+
+        <Button Text="Calcular Aportación" Command="{Binding CalcularAportacionCommand}" />
+        <Button Text="Limpiar" Command="{Binding LimpiarDatosCommand}" />
+        <Label Text="{Binding AportacionModel.Total}" FontSize="18" />
+    </StackLayout>
+</ContentPage>

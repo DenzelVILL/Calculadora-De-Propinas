@@ -57,13 +57,22 @@
 	  <Compile Update="Views\TipCalculatorPage.xaml.cs">
 	    <DependentUpon>TipCalculatorPage.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="Views\UserPreferencePage.xaml.cs">
+	    <DependentUpon>UserPreferencePage.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Views\Aportaciones.xaml">
+	  <MauiXaml Update="Views\AboutPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\AportacionesPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\TipCalculatorPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\UserPreferencePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

@@ -15,9 +15,14 @@
             ContentTemplate="{DataTemplate local:TipCalculatorPage}" />
 
         <ShellContent 
-            Title="Aportaciones"
-            Route="Aportaciones" 
-            ContentTemplate="{DataTemplate local:Aportaciones}" />
+    Title="Aportaciones" 
+    Route="AportacionPage"
+    ContentTemplate="{DataTemplate local:AportacionPage}" />
         
+        <ShellContent 
+    Title="Acerca De" 
+    Route="AboutPage"
+    ContentTemplate="{DataTemplate local:AboutPage}" />
+
     </TabBar>
 </Shell>
